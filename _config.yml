@@ -1,0 +1,83 @@
+# ----
+# Site 
+BitcoinVN
+title: BitcoinVN BTM
+url: https://btm.bitcoinvn.io
+baseurl:8000af1fc817fcacc8ea2372aea64dae265c4976
+google_analytics_key:AIzaSyA65lEHUEizIsNtlbNo-l2K18dT680nsaM
+show_full_navigation: true
+
+social:
+  email: quangthong1011@gmail.com
+  facebook: https://www.facebook.com/BitcoinATMHCMC
+  telegram: https://t.me/BitcoinATMVietnamUpdates
+
+# Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
+logo: /images/bitcoinvn.svg
+description: Information and documentation regarding BTM network of BitcoinVN
+author:
+  name: Thong Ngo
+  email: quangthong1011@gmail.com
+  twitter: Bitcoin_Vietnam
+
+# -----
+# Build
+
+timezone: Etc/UTC
+
+permalink: /:categories/:year/:month/:day/:title
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+
+exclude:
+  - .idea
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENCE
+  - vendor
+
+collections:
+  docs:
+    title: Documentation
+    permalink: /:path
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: default
+  -
+    scope:
+      path: ""
+      type: "docs"
+    values:
+      seo:
+        type: Article
+      _comments:
+        category: Group navigation links with this field
+        order: Used to sort links in the navigation
+      _options:
+        content:
+          width: 800
+          height: 2000
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      _comments:
+        type: Marks the impact of this release
+
+# -----------
+# CloudCannon
+
+types:
+  - announcement
+  - minor
+  - major
