@@ -1,5 +1,5 @@
 ---
-title: Invest into the BTM network in Vietnam
+title: THONG-NGO_BitcoinVN-BTM
 type: announcement
 ---
 
